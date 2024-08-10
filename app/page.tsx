@@ -167,7 +167,7 @@ export default function Home() {
       }} setApi={setApi} >
       <CarouselContent className="">
         {imgSet.map((url,ind)=>
-          <CarouselItem key={ind} className="w-full aspect-[4/1.8]">
+          <CarouselItem id={`${url}`} key={ind} className="w-full aspect-[4/1.8]">
             <Image className="bg-cover w-full h-full" key={ind} src={url} alt={`image ${ind}`}/>
           </CarouselItem>
         )}
