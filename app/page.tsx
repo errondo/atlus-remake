@@ -59,14 +59,14 @@ export default function Home() {
   return (
     <main>
       <NavigationMenu className="">
-        <Image priority src={logo} alt='logo' className="aspect-4/1 w-[90px]"/>
+        <Image priority src={logo} alt='logo' className="aspect-4/1 h-auto w-[90px]"/>
         <NavigationMenuList>
-        <NavigationMenuItem>
-          {theme == "dark"?<Button onClick={()=> setTheme('light')} variant={"outline"}><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-moon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <NavigationMenuItem key='1'>
+          {theme == "dark"?<Button onClick={()=> setTheme('light')} variant={"outline"}><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-moon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
 </svg></Button>: <Button onClick={()=> setTheme('dark')} variant={"outline"}>
-<svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-sun-low" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-sun-low" width="16" height="16" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
   <path d="M4 12h.01" />
@@ -80,18 +80,18 @@ export default function Home() {
 </svg>
   </Button>}
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem key='2'>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-white`}>
                 Home
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          <NavigationMenuItem key='3'>
             <NavigationMenuTrigger className="text-white">games</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-1 p-6 w-[435px] ">
-                <li className="">
+                <li key={'1'} className="">
                   <NavigationMenuLink >
                   <p className="flex">
                     Upcoming  <svg xmlns="http://www.w3.org/2000/svg" className="icon w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
@@ -104,7 +104,7 @@ export default function Home() {
                   </p>
                   </NavigationMenuLink>
                 </li>
-                <li>
+                <li key={'2'}>
                   <NavigationMenuLink>
                   <p className="flex">
                     Available  <svg xmlns="http://www.w3.org/2000/svg" className="icon w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
@@ -117,7 +117,7 @@ export default function Home() {
                   </p>
                   </NavigationMenuLink>
                 </li>
-                <li>
+                <li key={'3'}>
                   <NavigationMenuLink>
                   <p className="flex">
                     Classic Titles  <svg xmlns="http://www.w3.org/2000/svg" className="icon w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
@@ -133,7 +133,7 @@ export default function Home() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          <NavigationMenuItem key='4'>
             <NavigationMenuTrigger className="text-white">Contacts</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[435px]  gap-3 p-4   ">
@@ -141,14 +141,14 @@ export default function Home() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          <NavigationMenuItem  key='5'>
             <Link href="/shop" legacyBehavior passHref>
               <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-white`}>
                 Shop
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          <NavigationMenuItem key='6'>
             <Link href="/news" legacyBehavior passHref>
               <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-white`}>
                 News
@@ -167,7 +167,7 @@ export default function Home() {
       }} setApi={setApi} >
       <CarouselContent className="">
         {imgSet.map((url,ind)=>
-          <CarouselItem className="w-full aspect-[4/1.8]">
+          <CarouselItem key={ind} className="w-full aspect-[4/1.8]">
             <Image className="bg-cover w-full h-full" key={ind} src={url} alt={`image ${ind}`}/>
           </CarouselItem>
         )}
@@ -180,7 +180,7 @@ export default function Home() {
 
       </div>
       <footer className="w-full flex justify-between bg-slate-700 h-[200px]">
-        <Image className="aspect-4/1" src={logo} alt={'logo'} />
+        <Image className="aspect-4/1 w-[200px]" src={logo} alt={'logo'} />
         <div>
           
         </div>
