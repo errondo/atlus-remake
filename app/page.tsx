@@ -180,7 +180,7 @@ export default function Home() {
       <section className="bg-slate-800 h-[2000px] w-full">
          <Item>
            {Array.from({length:11}).map((_,ind)=>
-                   <div id={`${ind}`}>
+                   <div key={ind} id={`${ind}`}>
                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler bg-slate-950 icon-tabler-brand-apple-arcade" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
              <path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
