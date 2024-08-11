@@ -94,7 +94,7 @@ export default function Home() {
                 <li key={'1'} className="">
                   <NavigationMenuLink >
                   <p className="flex">
-                    Upcoming  <svg xmlns="http://www.w3.org/2000/svg" className="icon dark:fill-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                    Upcoming  <svg xmlns="http://www.w3.org/2000/svg" className="icon fill-black dark:fill-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                       <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
                       <path d="M16 12l-4 -4" />
@@ -107,7 +107,7 @@ export default function Home() {
                 <li key={'2'}>
                   <NavigationMenuLink>
                   <p className="flex">
-                    Available  <svg xmlns="http://www.w3.org/2000/svg" className="icon dark:fill-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                    Available  <svg xmlns="http://www.w3.org/2000/svg" className="icon fill-black dark:fill-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                       <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
                       <path d="M16 12l-4 -4" />
@@ -120,7 +120,7 @@ export default function Home() {
                 <li key={'3'}>
                   <NavigationMenuLink>
                   <p className="flex">
-                    Classic Titles  <svg xmlns="http://www.w3.org/2000/svg" className="icon dark:fill-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                    Classic Titles  <svg xmlns="http://www.w3.org/2000/svg" className="icon fill-black dark:fill-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                       <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
                       <path d="M16 12l-4 -4" />
