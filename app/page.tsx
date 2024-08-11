@@ -31,6 +31,7 @@ import {
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay"
 import { Button } from "@/components/ui/button";
+import { Item } from "@radix-ui/react-navigation-menu";
 
 const imgSet = [
   img1,img2,img3,img4,img5,img6,img7
@@ -94,7 +95,7 @@ export default function Home() {
                 <li key={'1'} className="">
                   <NavigationMenuLink >
                   <p className="flex">
-                    Upcoming  <svg xmlns="http://www.w3.org/2000/svg" className="icon stroke-black dark:stroke-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                    Upcoming  <svg xmlns="http://www.w3.org/2000/svg" className="icon w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                       <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
                       <path d="M16 12l-4 -4" />
@@ -107,7 +108,7 @@ export default function Home() {
                 <li key={'2'}>
                   <NavigationMenuLink>
                   <p className="flex">
-                    Available  <svg xmlns="http://www.w3.org/2000/svg" className="icon stroke-black dark:stroke-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                    Available  <svg xmlns="http://www.w3.org/2000/svg" className="icon w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                       <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
                       <path d="M16 12l-4 -4" />
@@ -120,7 +121,7 @@ export default function Home() {
                 <li key={'3'}>
                   <NavigationMenuLink>
                   <p className="flex">
-                    Classic Titles  <svg xmlns="http://www.w3.org/2000/svg" className="icon stroke-black dark:stroke-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                    Classic Titles  <svg xmlns="http://www.w3.org/2000/svg" className="icon w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                       <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
                       <path d="M16 12l-4 -4" />
@@ -137,7 +138,7 @@ export default function Home() {
             <NavigationMenuTrigger className="text-white">Contacts</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[435px]  gap-3 p-4   ">
-               <li><p>support</p></li>
+               <li>support</li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -176,19 +177,21 @@ export default function Home() {
       <CarouselNext className="absolute top-1/2" />
       <p className="absolute w-24 rounded-2xl p-5 bg-slate-600 -translate-y-8 left-1/2 right-1/2 -translate-x-1/2">{current} of {count}</p>
       </Carousel>
-      <div className="bg-slate-800 h-[2000px] w-full">
-         {Array.from({length:11}).map((_,ind)=>
-        <div id={`${ind}`}>
-                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler bg-slate-950 icon-tabler-brand-apple-arcade" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-  <path d="M20 12.5v4.75a.734 .734 0 0 1 -.055 .325a.704 .704 0 0 1 -.348 .366l-5.462 2.58a5 5 0 0 1 -4.27 0l-5.462 -2.58a.705 .705 0 0 1 -.401 -.691l0 -4.75" />
-  <path d="M4.431 12.216l5.634 -2.332a5.065 5.065 0 0 1 3.87 0l5.634 2.332a.692 .692 0 0 1 .028 1.269l-5.462 2.543a5.064 5.064 0 0 1 -4.27 0l-5.462 -2.543a.691 .691 0 0 1 .028 -1.27z" />
-  <path d="M12 7l0 6" />
-</svg>
-        </div>
-        )}
-      </div>
+      <section className="bg-slate-800 h-[2000px] w-full">
+         <Item>
+           {Array.from({length:11}).map((_,ind)=>
+                   <div id={`${ind}`}>
+                   <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler bg-slate-950 icon-tabler-brand-apple-arcade" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
+             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+             <path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+             <path d="M20 12.5v4.75a.734 .734 0 0 1 -.055 .325a.704 .704 0 0 1 -.348 .366l-5.462 2.58a5 5 0 0 1 -4.27 0l-5.462 -2.58a.705 .705 0 0 1 -.401 -.691l0 -4.75" />
+             <path d="M4.431 12.216l5.634 -2.332a5.065 5.065 0 0 1 3.87 0l5.634 2.332a.692 .692 0 0 1 .028 1.269l-5.462 2.543a5.064 5.064 0 0 1 -4.27 0l-5.462 -2.543a.691 .691 0 0 1 .028 -1.27z" />
+             <path d="M12 7l0 6" />
+           </svg>
+                   </div>
+                   )}
+         </Item>
+      </section>
       <footer className="w-full flex justify-between bg-slate-700 h-[200px]">
         <Image className="aspect-4/1 w-[200px]" src={logo} alt={'logo'} />
         <div>
