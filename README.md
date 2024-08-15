@@ -1,1 +1,1 @@
-a remake of the official atlus website
+a remake of the official atlus website.
