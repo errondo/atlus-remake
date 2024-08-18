@@ -31,7 +31,7 @@ import {
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay"
 import { Button } from "@/components/ui/button";
-import { Item } from "@radix-ui/react-navigation-menu";
+import { Dock, DockIcon } from "@/components/magicui/dock";
 
 const imgSet = [
   img1,img2,img3,img4,img5,img6,img7
@@ -178,9 +178,9 @@ export default function Home() {
       </CarouselContent>
       <CarouselPrevious className="absolute top-1/2"/>
       <CarouselNext className="absolute top-1/2" />
-      <p className="absolute w-24 rounded-2xl p-5 bg-slate-600 -translate-y-8 left-1/2 right-1/2 -translate-x-1/2">{current} of {count}</p>
+      <p className="absolute w-24 rounded-2xl p-5 bg-slate-300 dark:bg-slate-600 -translate-y-8 left-1/2 right-1/2 -translate-x-1/2">{current} of {count}</p>
       </Carousel>
-      <section className="dark:bg-slate-800 bg-slate-400 h-[1500px] w-full">
+      <section className="dark:bg-slate-800 bg-slate-400 h-[1200px] w-full">
          <div className="flex my-0 mx-auto items-center justify-center">
            <div className="grid my-20 grid-cols-4 gap-8">
              {Array.from({length:11}).map((_,ind)=>
@@ -193,23 +193,65 @@ export default function Home() {
                <path d="M12 7l0 6" />
              </svg>
              <div className=" -translate-y-10 p-3 bg-gradient-to-t from-white to-transparent from-85% dark:from-black dark:to-transparent dark:from-85% dark:bg-gradient-to-t">
-              <h3 className="text-center">game title</h3>
+              <h3 className="text-center font-bold font-sans">game title</h3>
               <p>decription</p>
-              <span className="flex">4.5<svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-star-filled" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <span className="flex pt-2">4.5<svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-star-filled" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor" />
-</svg></span><p className="text-right -translate-y-6">price: 9.99$</p>
-<Button className="mx-9 my-5" variant={'outline'}>purchase</Button>
+</svg></span><p className="text-right text-orange-400 -translate-y-5">9.99$</p> 
+
              </div>
                      </div>
                      )}
            </div>
          </div>
       </section>
-      <footer className="w-full flex justify-between bg-slate-700 h-[200px]">
-        <Image className="aspect-4/1 w-[200px]" src={logo} alt={'logo'} />
+      <footer className="w-full flex justify-evenly items-center bg-slate-500 dark:bg-slate-700 h-[200px]">
+        <Image className="aspect-auto w-[200px]" src={logo} alt={'logo'} />
         <div>
-         
+          <h2 className="text-center mt-5">join our news letter</h2>
+          <Dock direction="middle">
+          <DockIcon>
+          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-facebook" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#597e8d" fill="none" strokeLinecap="round" strokeLinejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+</svg>
+          </DockIcon>
+          <DockIcon>
+          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-instagram" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#597e8d" fill="none" strokeLinecap="round" strokeLinejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+  <path d="M16.5 7.5l0 .01" />
+</svg>
+          </DockIcon>
+          <DockIcon>
+          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-twitch" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#597e8d" fill="none" strokeLinecap="round" strokeLinejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z" />
+  <path d="M16 8l0 4" />
+  <path d="M12 8l0 4" />
+</svg>
+          </DockIcon>
+          <DockIcon>
+          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-x" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#597e8d" fill="none" strokeLinecap="round" strokeLinejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+</svg>
+          </DockIcon>
+          <DockIcon>
+          <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-youtube" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#597e8d" fill="none" strokeLinecap="round" strokeLinejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+          </DockIcon>
+          </Dock>
+        </div>
+        <div>
+        <h3>Company</h3>
+        <h4>careers</h4>
         </div>
       </footer>
     </main>
