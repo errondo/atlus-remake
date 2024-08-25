@@ -63,7 +63,7 @@ export default function Home() {
         <Image priority src={logo} alt='logo' className="aspect-4/1 h-auto w-[90px]"/>
         <NavigationMenuList>
         <NavigationMenuItem key='1'>
-          {theme == "dark"?<Button onClick={()=> setTheme('light')} variant={"outline"}><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-moon" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
+          {theme === "dark"?<Button onClick={()=> setTheme('light')} variant={"outline"}><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-moon" width="16" height="16" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
 </svg></Button>: <Button onClick={()=> setTheme('dark')} variant={"outline"}>
@@ -95,7 +95,7 @@ export default function Home() {
                 <li key={'1'} className="">
                   <NavigationMenuLink >
                   <p className="flex">
-                    Upcoming  <svg xmlns="http://www.w3.org/2000/svg" className="icon stroke-black dark:stroke-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                    Upcoming  <svg xmlns="http://www.w3.org/2000/svg" className="icon stroke-black dark:stroke-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                       <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
                       <path d="M16 12l-4 -4" />
@@ -108,7 +108,7 @@ export default function Home() {
                 <li key={'2'}>
                   <NavigationMenuLink>
                   <p className="flex">
-                    Available  <svg xmlns="http://www.w3.org/2000/svg" className="icon stroke-black dark:stroke-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                    Available  <svg xmlns="http://www.w3.org/2000/svg" className="icon stroke-black dark:stroke-white w-6 h-6 " width="48" height="48" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                       <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
                       <path d="M16 12l-4 -4" />
@@ -121,7 +121,7 @@ export default function Home() {
                 <li key={'3'}>
                   <NavigationMenuLink>
                   <p className="flex">
-                    Classic Titles  <svg xmlns="http://www.w3.org/2000/svg" className="icon w-6 stroke-black dark:stroke-white h-6 " width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                    Classic Titles  <svg xmlns="http://www.w3.org/2000/svg" className="icon w-6 stroke-black dark:stroke-white h-6 " width="48" height="48" viewBox="0 0 24 24" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                       <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" />
                       <path d="M16 12l-4 -4" />
@@ -185,7 +185,7 @@ export default function Home() {
            <div className="grid my-20 grid-cols-4 gap-8">
              {Array.from({length:11}).map((_,ind)=>
                      <div className="" key={ind} id={`${ind}`}>
-                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler bg-slate-950 icon-tabler-brand-apple-arcade" width="200" height="200" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" strokeLinejoin="round">
+                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler bg-slate-950 icon-tabler-brand-apple-arcade" width="200" height="200" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                <path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
                <path d="M20 12.5v4.75a.734 .734 0 0 1 -.055 .325a.704 .704 0 0 1 -.348 .366l-5.462 2.58a5 5 0 0 1 -4.27 0l-5.462 -2.58a.705 .705 0 0 1 -.401 -.691l0 -4.75" />
@@ -195,9 +195,9 @@ export default function Home() {
              <div className=" -translate-y-10 p-3 bg-gradient-to-t from-white to-transparent from-85% dark:from-black dark:to-transparent dark:from-85% dark:bg-gradient-to-t">
               <h3 className="text-center font-bold font-sans">game title</h3>
               <p>decription</p>
-              <span className="flex pt-2">4.5<svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-star-filled" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <span className="flex pt-2">4.5<svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler translate-y-1 icon-tabler-star-filled" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffec00" fill="none" strokeLinecap="round" strokeLinejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor" />
+  <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" strokeWidth="0" fill="currentColor" />
 </svg></span><p className="text-right text-orange-400 -translate-y-5">9.99$</p> 
 
              </div>
