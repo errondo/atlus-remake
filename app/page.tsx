@@ -172,7 +172,15 @@ export default function Home() {
       <CarouselContent className="">
         {imgSet.map((url,ind)=>
           <CarouselItem id={`${url}`} key={ind} className="w-full aspect-[4/1.8]">
-            <Image className="bg-cover w-full h-full" key={ind} src={url} alt={`image ${ind}`}/>
+            <div className="absolute top-0 w-full h-full bg-gradient-to-t from-5% from-black to-90% to-transparent">
+              <div className="absolute p-14 w-[50%] bottom-0">
+                <h1 className="pl-10 text-4xl font-bold">THE TITLE OF GAME</h1>
+                <p className="line-clamp-2 leading-tight">the game has a description that most likely no body would read so here i am writing some nonsence to be followed by lorem ipsum ,TAKE Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar mollis faucibus. Sed commodo lacus quis lacus ullamcorper varius. Mauris vel mollis enim, nec consectetur nulla. Phasellus tempor dui non dolor consectetur malesuada. Curabitur quis posuere enim. Aenean venenatis quam ut sapien luctus consectetur. Nunc lobortis, odio id lacinia accumsan, orci felis fermentum erat, quis fringilla sem orci non massa. Vivamus sed mollis lorem. Donec accumsan convallis lacinia. Vivamus venenatis massa non massa ullamcorper, ut mollis elit posuere.</p>
+                <Button className="m-3" variant={"outline"}>Read more..</Button>
+              </div>
+            </div>
+            <Image className="bg-cover  w-full h-full" key={ind} src={url} alt={`image ${ind}`}/>
+            
           </CarouselItem>
         )}
       </CarouselContent>
@@ -180,9 +188,9 @@ export default function Home() {
       <CarouselNext className="absolute top-1/2" />
       <p className="absolute w-24 rounded-2xl p-5 bg-slate-300 dark:bg-slate-600 -translate-y-8 left-1/2 right-1/2 -translate-x-1/2">{current} of {count}</p>
       </Carousel>
-      <section className="dark:bg-slate-800 bg-slate-400 h-[1200px] w-full">
+      <section className="dark:bg-slate-800 bg-slate-400 py-16 w-full">
          <div className="flex my-0 mx-auto items-center justify-center">
-           <div className="grid my-20 grid-cols-4 gap-8">
+           <div className="grid my-20 grid-cols-5 gap-8">
              {Array.from({length:11}).map((_,ind)=>
                      <div className="" key={ind} id={`${ind}`}>
                      <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler bg-slate-950 icon-tabler-brand-apple-arcade" width="200" height="200" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -203,6 +211,9 @@ export default function Home() {
              </div>
                      </div>
                      )}
+           </div>
+           <div>
+
            </div>
          </div>
       </section>
