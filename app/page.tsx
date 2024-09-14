@@ -1,7 +1,7 @@
 "use client"
 import * as React from "react"
 import Link from "next/link"
-import  logo  from "@/imgs/atlus-logo.png";
+import  logo  from "@/imgs/atlus-logo.jpg";
 import { cn } from "@/lib/utils"
 import img1 from '@/imgs/carousel-img/download (1).jpeg'
 import img2 from '@/imgs/carousel-img/download.jpeg'
