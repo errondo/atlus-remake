@@ -190,7 +190,7 @@ export default function Home() {
       </Carousel>
       <section className="dark:bg-slate-800 bg-slate-400 py-16 w-full">
          <div className="flex my-0 mx-auto items-center justify-center">
-           <div className="grid my-20 grid-cols-5 gap-8">
+           <div className="flex my-20 p-14 flex-wrap items-center justify-evenly gap-10">
              {Array.from({length:11}).map((_,ind)=>
                      <div className="" key={ind} id={`${ind}`}>
                      <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler bg-slate-950 icon-tabler-brand-apple-arcade" width="200" height="200" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
